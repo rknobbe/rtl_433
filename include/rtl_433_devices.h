@@ -53,7 +53,8 @@
 		DECL(akhan_100F14) \
 		DECL(quhwa) \
 		DECL(oregon_scientific_v1) \
-		DECL(proove)
+		DECL(proove) \
+		DECL(bresser_3ch)
 
 typedef struct {
 	char name[256];
@@ -63,7 +64,7 @@ typedef struct {
 	float reset_limit;
 	int (*json_callback)(bitbuffer_t *bitbuffer);
 	unsigned int disabled;
-	unsigned long demod_arg;	// Decoder specific optional argument (may be pointer to struct)
+	uintptr_t demod_arg;	// Decoder specific optional argument (may be pointer to struct)
 	char **fields;			// List of fields this decoder produces; required for CSV output. NULL-terminated.
 } r_device;
 
